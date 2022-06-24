@@ -10,7 +10,7 @@ class Basic(commands.Cog):
 
 
 
-    @nextcord.slash_command(name = "ping", description = "Testing hehe", guild_ids=[982973690478211072])
+    @nextcord.slash_command(name = "ping", description = "Testing hehe")
     async def ping(self, ctx: Interaction):
         await ctx.send("Helloz")
 
