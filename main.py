@@ -19,6 +19,17 @@ async def on_start():
 async def help(ctx: Interaction):
     await ctx.send("Hello!")
 
+
+
+initial_extentions = []
+
+for filename in os.listdir('./cogs'):
+    if filename.endswith('.py'):
+        initial_extentions.append("cogs." + filename[:-3])
+
+if __name__ == '__main__':
+    for extention in initial_extentions:
+        bot.load_extension(extention)
     
 
 bot.run(os.environ['BOT_TOKEN'])
