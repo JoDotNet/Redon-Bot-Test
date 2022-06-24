@@ -5,7 +5,7 @@ from nextcord import Interaction
 
 import os
 
-intents = nextcord.intents.default()
+intents = nextcord.Intents.default()
 intents.members = True
 
 bot = commands.Bot(intents = intents)
