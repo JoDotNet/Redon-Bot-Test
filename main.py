@@ -5,7 +5,10 @@ from nextcord import Interaction
 
 import os
 
-bot = commands.Bot()
+intents = nextcord.intents.default()
+intents.members = True
+
+bot = commands.Bot(intents = intents)
 
 @bot.event
 async def on_start():
